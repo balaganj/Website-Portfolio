@@ -1658,7 +1658,7 @@ header .logo a {
 	height: 4.8rem;
 	width: 4.8rem;
 	line-height: 4.8rem;
-	background: #313131;
+	background: #33131;
 	border-radius: 50%;
 	text-align: center;
 	color: #FFFFFF;
@@ -2022,7 +2022,245 @@ header .logo a {
 
 /** 
  * ===================================================================
- * 14. call-to-action section - (_layout.scss)
+ * 14. certifications - (_layout.scss)
+ *
+ * ------------------------------------------------------------------- 
+ */
+ #certification {
+	background: #ebebeb;
+	padding-top: 12rem;
+	padding-bottom: 12rem;
+}
+#certification .cert-item {
+	padding: 0;
+	position: relative;
+	overflow: hidden;
+}
+#certification .cert-item img {
+	vertical-align: middle;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+#certification .overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+#certification .cert-item-table {
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+#certification .cert-item-cell {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+	position: relative;
+	left: -100%;
+}
+
+#certification .cert-title {
+	color: #FFFFFF;
+	font-size: 3.3rem;
+	padding: 0 3rem;
+	margin-bottom: 0;
+}
+#certification .cert-types {
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+	font-family: "poppins-regular", sans-serif;
+	font-size: 1.2rem;
+	letter-spacing: .1rem;
+	color: rgba(255, 255, 255, 0.6);
+}
+#certification .cert-item:hover .overlay {
+	background: rgba(0, 0, 0, 0.8);
+}
+#certification .cert-item:hover .folio-item-cell {
+	left: 0;
+}
+#certification .cert-item:hover img {
+	-webkit-transform: scale(1.05);
+	-ms-transform: scale(1.05);
+	transform: scale(1.05);
+}
+
+/**
+ * responsive:
+ * certification
+ * ------------------------------------------------------------------- 
+ */
+@media only screen and (max-width:1024px) {
+	#certification .cert-title {
+		font-size: 3.1rem;
+	}
+}
+@media only screen and (max-width:768px) {
+	#certification .cert-title {
+		font-size: 2.5rem;
+	}
+}
+@media only screen and (max-width:400px) {
+	#certification .cert-title {
+		font-size: 2.2rem;
+	}
+}
+
+
+/**
+ * Popup Modal - (_layout.scss)
+ * ------------------------------------------------------------------
+ */
+.popup-modal {
+	max-width: 550px;
+	background: #FFFFFF;
+	position: relative;
+	margin: 0 auto;
+}
+.popup-modal .media {
+	position: relative;
+}
+.popup-modal img {
+	vertical-align: bottom;
+}
+.popup-modal .description-box {
+	padding: 1.8rem 3.6rem 3rem;
+}
+.popup-modal .description-box h4 {
+	font-family: "poppins-bold", sans-serif;
+	font-size: 1.5rem;
+	line-height: 2.4rem;
+	margin-bottom: .6rem;
+}
+.popup-modal .description-box p {
+	font-family: "poppins-regular", sans-serif;
+	font-size: 1.4rem;
+	line-height: 2.4rem;
+	margin-bottom: 12px;
+}
+.popup-modal .categories {
+	font-family: "poppins-bold", sans-serif;
+	font-size: 1.1rem;
+	line-height: 1.8rem;
+	text-transform: uppercase;
+	letter-spacing: .1rem;
+	display: block;
+	text-align: left;
+	color: rgba(0, 0, 0, 0.5);
+}
+.popup-modal .link-box {
+	width: 100%;
+	overflow: hidden;
+	background: #000000;
+}
+.popup-modal .link-box a {
+	font-family: "poppins-bold", sans-serif;
+	font-size: 1.2rem;
+	line-height: 6rem;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	cursor: pointer;
+	display: block;
+	text-align: center;
+	float: left;
+	width: 50%;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.popup-modal .link-box a:first-child {
+	border-right: 1px solid rgba(200, 200, 200, 0.1);
+}
+.popup-modal .link-box a:hover {
+	background: #cc005f;
+	border: none;
+}
+@media only screen and (max-width:600px) {
+	.popup-modal {
+		width: auto;
+		margin: 0 20px;
+	}
+}
+
+/**
+ * transition effect for modal popup - (_layout.scss)
+ * ------------------------------------------------------------------ 
+ */
+
+/* overlay at start */
+.mfp-fade.mfp-bg {
+	opacity: 0;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready {
+	opacity: .9;
+}
+
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing {
+	opacity: 0;
+}
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content {
+	opacity: 0;
+	-webkit-transform: translateY(-100%);
+	-ms-transform: translateY(-100%);
+	transform: translateY(-100%);
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+/* content animate in */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+	opacity: 1;
+	-webkit-transform: translateY(0);
+	-ms-transform: translateY(0);
+	transform: translateY(0);
+}
+
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+	opacity: 0;
+	-webkit-transform: translateY(-100%);
+	-ms-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+
+/** 
+ * ===================================================================
+ * 15. call-to-action section - (_layout.scss)
  *
  * ------------------------------------------------------------------- 
  */
@@ -2090,7 +2328,7 @@ header .logo a {
 
 /** 
  * ===================================================================
- * 15. services - (_layout.scss)
+ * 16. services - (_layout.scss)
  *
  * ------------------------------------------------------------------- 
  */
@@ -2178,7 +2416,7 @@ header .logo a {
 
 /** 
  * ===================================================================
- * 16. stats - (_layout.scss)
+ * 17. stats - (_layout.scss)
  *
  * ------------------------------------------------------------------- 
  */
@@ -2245,7 +2483,7 @@ header .logo a {
 
 /** 
  * ===================================================================
- * 17. contact - (_layout.scss)
+ * 18. contact - (_layout.scss)
  *
  * ------------------------------------------------------------------- 
  */
@@ -2486,7 +2724,7 @@ header .logo a {
 
 /** 
  * ===================================================================
- * 18. footer - (_layout.scss)
+ * 19. footer - (_layout.scss)
  *
  * ------------------------------------------------------------------- 
  */
