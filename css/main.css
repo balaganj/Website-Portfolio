@@ -2027,7 +2027,7 @@ header .logo a {
  * ------------------------------------------------------------------- 
  */
  #certification {
-	background: #ebebeb;
+	background: #FFFFFF;
 	padding-top: 12rem;
 	padding-bottom: 12rem;
 }
@@ -2095,7 +2095,7 @@ header .logo a {
 #certification .cert-item:hover .overlay {
 	background: rgba(0, 0, 0, 0.8);
 }
-#certification .cert-item:hover .folio-item-cell {
+#certification .cert-item:hover .cert-item-cell {
 	left: 0;
 }
 #certification .cert-item:hover img {
@@ -2110,21 +2110,20 @@ header .logo a {
  * ------------------------------------------------------------------- 
  */
 @media only screen and (max-width:1024px) {
-	#certification .cert-title {
+	#portfolio .cert-title {
 		font-size: 3.1rem;
 	}
 }
 @media only screen and (max-width:768px) {
-	#certification .cert-title {
+	#portfolio .cert-title {
 		font-size: 2.5rem;
 	}
 }
 @media only screen and (max-width:400px) {
-	#certification .cert-title {
+	#portfolio .cert-title {
 		font-size: 2.2rem;
 	}
 }
-
 
 /**
  * Popup Modal - (_layout.scss)
