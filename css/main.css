@@ -1658,7 +1658,7 @@ header .logo a {
 	height: 4.8rem;
 	width: 4.8rem;
 	line-height: 4.8rem;
-	background: #33131;
+	background: #333;
 	border-radius: 50%;
 	text-align: center;
 	color: #FFFFFF;
@@ -2126,37 +2126,37 @@ header .logo a {
 }
 
 /**
- * Popup Modal - (_layout.scss)
+ * PPM - (_layout.scss)
  * ------------------------------------------------------------------
  */
-.popup-modal {
+.ppm {
 	max-width: 550px;
 	background: #FFFFFF;
 	position: relative;
 	margin: 0 auto;
 }
-.popup-modal .media {
+.ppm .media {
 	position: relative;
 }
-.popup-modal img {
+.ppm img {
 	vertical-align: bottom;
 }
-.popup-modal .description-box {
+.ppm .description-box {
 	padding: 1.8rem 3.6rem 3rem;
 }
-.popup-modal .description-box h4 {
+.ppm .description-box h4 {
 	font-family: "poppins-bold", sans-serif;
 	font-size: 1.5rem;
 	line-height: 2.4rem;
 	margin-bottom: .6rem;
 }
-.popup-modal .description-box p {
+.ppm .description-box p {
 	font-family: "poppins-regular", sans-serif;
 	font-size: 1.4rem;
 	line-height: 2.4rem;
 	margin-bottom: 12px;
 }
-.popup-modal .categories {
+.ppm .categories {
 	font-family: "poppins-bold", sans-serif;
 	font-size: 1.1rem;
 	line-height: 1.8rem;
@@ -2166,12 +2166,12 @@ header .logo a {
 	text-align: left;
 	color: rgba(0, 0, 0, 0.5);
 }
-.popup-modal .link-box {
+.ppm .link-box {
 	width: 100%;
 	overflow: hidden;
 	background: #000000;
 }
-.popup-modal .link-box a {
+.ppm .link-box a {
 	font-family: "poppins-bold", sans-serif;
 	font-size: 1.2rem;
 	line-height: 6rem;
@@ -2189,27 +2189,27 @@ header .logo a {
 	-ms-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 }
-.popup-modal .link-box a:first-child {
+.ppm .link-box a:first-child {
 	border-right: 1px solid rgba(200, 200, 200, 0.1);
 }
-.popup-modal .link-box a:hover {
+.ppm .link-box a:hover {
 	background: #cc005f;
 	border: none;
 }
 @media only screen and (max-width:600px) {
-	.popup-modal {
+	.ppm {
 		width: auto;
 		margin: 0 20px;
 	}
 }
 
 /**
- * transition effect for modal popup - (_layout.scss)
+ * transition effect for ppm - (_layout.scss)
  * ------------------------------------------------------------------ 
  */
 
 /* overlay at start */
-.mfp-fade.mfp-bg {
+.pop-fade.pop-bg {
 	opacity: 0;
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -2219,17 +2219,17 @@ header .logo a {
 }
 
 /* overlay animate in */
-.mfp-fade.mfp-bg.mfp-ready {
+.pop-fade.pop-bg.pop-ready {
 	opacity: .9;
 }
 
 /* overlay animate out */
-.mfp-fade.mfp-bg.mfp-removing {
+.pop-fade.pop-bg.pop-removing {
 	opacity: 0;
 }
 
 /* content at start */
-.mfp-fade.mfp-wrap .mfp-content {
+.pop-fade.pop-wrap .pop-content {
 	opacity: 0;
 	-webkit-transform: translateY(-100%);
 	-ms-transform: translateY(-100%);
@@ -2242,7 +2242,7 @@ header .logo a {
 }
 
 /* content animate in */
-.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+.pop-fade.pop-wrap.pop-ready .pop-content {
 	opacity: 1;
 	-webkit-transform: translateY(0);
 	-ms-transform: translateY(0);
@@ -2250,7 +2250,7 @@ header .logo a {
 }
 
 /* content animate out */
-.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+.pop-fade.pop-wrap.pop-removing .pop-content {
 	opacity: 0;
 	-webkit-transform: translateY(-100%);
 	-ms-transform: translateY(-100%);
